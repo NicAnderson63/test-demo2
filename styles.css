@@ -21,8 +21,12 @@ You will find this is far easier than the opposite task of using CSS to cram you
 
 h1 {
   text-align: center;
-  font-size: 50px;
-  padding: 10px;
+  font-size: 20px;
+  padding top: 20px;
+}
+
+h2 {
+  text-align: center;
 }
 
 #byline {font-style: italic;
@@ -31,47 +35,90 @@ h1 {
   font-family: Georgia;
 }
 
+#photodescription {font-style: italic;
+  color: black;
+  text-align: center;
+  font-family: Georgia;
+  font-size: 8px}
+
 body {
-        background: linear-gradient(to left, #fff4e4, #fcf8f2);
+        background: ;
         background-repeat: no-repeat;
         background-attachment: fixed;
         font-size: 16px;
         font-family: Georgia;
-        background-color: #faebd7;
+        background-color: white;
         font-style: normal;
-        padding: 10px;
+        padding: 50px;
       }
 
-
-
   .div {
-    padding-top: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
   }
 
 img {
   display: flex;
   width: 100%;
+  height: auto;
   padding-bottom: 20px;
+  padding-top: 20px;
+
 }
 
 .container {
   display: block;
-  max-width: 750px;
+  max-width: 50px;
   margin: 0 auto;
+  font-size: 16px;
+}
+
+.container-photo {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row
+  width: inherit;
+}
+
+.photo-responsive{
+  overflow: hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  position:absolute;
+
 }
 
 #button {content color:#ADD8E6;
 text-align: center;
 font-family: Georgia;
-align-items: center;}
+align-items: center;
+
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+
+}
 
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
 @media(min-width: 681px) {
+
 
   .flex {
     display: flex;
@@ -80,9 +127,26 @@ align-items: center;}
 
 
   .flex > div {
-    flex-basis: 40%;
-    padding: 2px;
+    flex-basis: 50%;
+    padding left: 10px;
   }
+
+
+.container-photo {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+}
+
+img {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 0px;
+
 }
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
@@ -92,10 +156,18 @@ align-items: center;}
 *********************************************************************/
 @media(min-width: 729px); {
 
+}
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+  }
+
 .flex {
   display: flex;
-  align-items: center;
+  padding: inherit;
 }
+
     /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 729px or larger -- so desktop */
 }
